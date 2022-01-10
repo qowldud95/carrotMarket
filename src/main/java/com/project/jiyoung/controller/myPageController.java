@@ -18,5 +18,21 @@ public class myPageController {
         return "myProductList";
     }
 
+    /**
+     * 나의 당근
+     */
+    @GetMapping("myPage")
+    public String myPage(Model model){
+        return "myPage";
+    }
+
+    /**
+     * 나의 당근 (프로필 수정)
+     */
+    @GetMapping("myPageEdit")
+    public String myPageEdit(Model model){
+        return "myPageEdit";
+    }
+
 }
 

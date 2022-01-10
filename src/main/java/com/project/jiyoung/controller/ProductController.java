@@ -17,4 +17,28 @@ public class ProductController {
     public String productListPage(Model model){
         return "productList";
     }
+
+    /**
+     * 상품 등록
+     */
+    @GetMapping("productRegistration")
+    public String productRegistration(Model model){
+        return "productRegistration";
+    }
+
+    /**
+     * 상품 상세
+     */
+    @GetMapping("productDetail")
+    public String productDetail(Model model){
+        return "productDetail";
+    }
+
+    /**
+     * 댓글 남기기
+     */
+    @GetMapping("commentRegistration")
+    public String commentRegistration(Model model){
+        return "commentRegistration";
+    }
 }

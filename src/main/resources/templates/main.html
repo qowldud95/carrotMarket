@@ -1,27 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko" xmlns:th="http://thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <title>지영당근마켓</title>
+  <!--<script th:src="@{/js/main.js}"></script>-->
+  <link rel="stylesheet" type="text/css" href="css/style.css" th:href="@{/css/style.css}">
 </head>
 <body>
 <main>
-  <header class="mainHeader" style="height: 100px;">
-    
-  </header>
-  <section>
-    <article class="mainArticle1">
-      <img src="img/mainCarrot.png" class="mainImg" style="width:150px; height: 150px; display: block; margin: 0px auto; padding:20px;">
-    </article>
-    <article class="mainArticle2">
-      <h2 class="" style="text-align:center;">당신 근처의 Karrot 마켓</h2>
-      <h3 class="" style="text-align:center;"> 이제 내 동네에서 <br> 간편하게 중고거래하자</h3>
-    </article>
-    <article class="mainArticle3" style="margin-top:80px;text-align: center;" >
-      <button type="button" class="mainButton" style="font-size:20px; padding:10px 150px; border-radius:5px; display: block; margin: 0px auto; background-color: #FE9A2E; color:white; border:none; cursor:pointer;" onClick="location.href='member-join'">시작하기</button>
+  <div class="mainHeader">
+  </div>
+  <div>
+    <div>
+      <img src="img/mainCarrot.png" class="mainImg" >
+    </div>
+    <div>
+      <h2 class="mainText">당신 근처의 Karrot 마켓</h2>
+      <h3 class="mainText">이제 내 동네에서 <br> 간편하게 중고거래하자</h3>
+    </div>
+    <div class="mainButtonArea">
+      <button type="button" class="startButton" onClick="location.href='member-join'">시작하기</button>
       <h3>이미 계정이 있나요? <a href="login">로그인</a></h3>
-    </article>
-  </section>
+    </div>
+  </div>
 </main>
 
 

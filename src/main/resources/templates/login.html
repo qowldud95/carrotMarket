@@ -1,33 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko" xmlns:th="http://thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
     <script th:src="@{/js/login.js}"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css" th:href="@{/css/style.css}">
 </head>
 <body>
 <main>
-    <section class="login_container" style="margin-left:20px; margin-right: 20px;">
-        <h2 class="login_title">로그인</h2>
+    <div class="login_container">
+        <h2>로그인</h2>
         <form th:action="login" method="post" id="login_action" onsubmit="return formCheck()" >
-            <article class="login_id_pw" style="margin:80px 0;">
-                <div class="login_form_container">
-                    <div class="input_container">
-                        <label for="login_id" class="login_label" style="font-size:20px;">이메일(ID)</label><br>
-                        <input type="text" id="login_id" class="login" style="width:98%; height: 20px;" name="login_id">
-                    </div>
-                </div>
-                <div class="login_form_container">
-                    <div class="input_container">
-                        <label for="login_pw" class="login_label" style="font-size:20px;">비밀번호(PW)</label><br>
-                        <input type="text" id="login_pw" class="login" style="width:98%; height: 20px;" name="login_pw">
-                    </div>
-                </div>
-            </article>
-            <button type="submit" class="login_btn" style="font-size:20px; width:100%; padding:10px; border-radius:5px; display: block; background-color: #FE9A2E; color:white; border:none; cursor:pointer; text-align:center; margin-top: 20px;" id="login_btn">로그인</button>
-            <h3 style="text-align: center">비밀번호를 잊어버리셨나요?<br><a href="#" style="color: #FE9A2E; text-decoration-line: none; ">비밀번호찾기</a></h3>
+            <div class="loginTextArea">
+                    <label for="login_id" class="login_label">이메일(ID)</label><br>
+                    <input type="text" class="loginText" id="login_id" name="login_id">
+                    <label for="login_pw" class="login_label">비밀번호(PW)</label><br>
+                    <input type="text" class="loginText" id="login_pw" name="login_pw">
+            </div>
+            <button type="submit" class="loginButton" id="login_btn">로그인</button>
+            <h3 class="pwSearchQuestion">비밀번호를 잊어버리셨나요?<br><a href="#" class="pwSearchButton">비밀번호찾기</a></h3>
         </form>
-    </section>
+    </div>
 </main>
 
 </body>

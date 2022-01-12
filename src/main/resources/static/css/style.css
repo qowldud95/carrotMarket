@@ -44,10 +44,23 @@ fieldset {
 }
 /*css 초기화 end*/
 
+/*공통*/
+.common_title{
+    border:none;
+    padding-bottom: 20px;
+    font-size: 50px;
+    font-weight: bolder;
+}
+.common_back{
+    font-size:50px;
+    text-decoration-line: none;
+    color:black;
+}
 
 /*main css*/
-.mainHeader {
-    height:100px;
+.main_container {
+    padding-top:50px;
+    margin:0 50px;
 }
 .mainImg {
     width:150px;
@@ -56,41 +69,59 @@ fieldset {
     margin: 0px auto;
     padding:20px;
 }
+.mainTitle {
+    text-align:center;
+}
 .mainText {
+    padding:30px 0;
     text-align:center;
 }
 .mainButtonArea{
-    margin-top:80px;
+    margin-top:40px;
     text-align: center;
 }
 
 .startButton{
+    height:50px;
     font-size:20px;
-    padding:10px 150px;
+    width:100%;
+    padding:10px;
     border-radius:5px;
     display: block;
-    margin: 0px auto;
     background-color: #FE9A2E;
     color:white;
     border:none;
     cursor:pointer;
+    text-align:center;
+    margin-top: 20px;
+}
+.startButtonText{
+    padding:10px 0;
+}
+.startLoginButton{
+    color:#FE9A2E;
+    text-decoration-line: none;
 }
 
 /*login css*/
 .login_container{
-    margin-left:20px; margin-right: 20px;
+    padding-top:50px;
+    margin:0 50px;
 }
-.loginTextArea{
-    margin:80px 0;
+.login_box{
+    margin:10px 0;
 }
 .login_label{
-    font-size:20px;
+    font-size: 25px;
+    font-weight: bolder;
 }
 .loginText{
-    width:98%;
-    height: 20px;
+    width:100%;
+    height: 50px;
+    margin-top:10px;
 }
 .loginButton{
+    height:50px;
     font-size:20px;
     width:100%;
     padding:10px;
@@ -111,22 +142,29 @@ fieldset {
     text-align: center;
 }
 .pwSearchQuestion{
+    padding:10px 0;
     text-align: center;
 }
 
 /*memberJoin css*/
 .member_join_container{
-    margin-left:20px; margin-right: 20px;
+    padding-top:50px;
+    margin:0 50px;
 }
-
+.member_join_box{
+    margin:10px 0;
+}
 .member_join_label{
-    font-size:20px;
+    font-size: 25px;
+    font-weight: bolder;
 }
 .member_join_text{
-    width:98%;
-    height: 20px;
+    width:100%;
+    height: 50px;
+    margin-top:10px;
 }
 .member_join_btn{
+    height:50px;
     font-size:20px;
     width:100%;
     padding:10px;
@@ -142,24 +180,40 @@ fieldset {
 
 
 /*productList css*/
-.product_list_container{
-    margin-left:20px; margin-right: 20px;
-}
+.list_search_area{
+    height:130px;
 
+}
+.product_list_container{
+    padding-top:50px;
+    margin:0 50px;
+}
+.product_list_search{
+    width:88%;
+    height:100px;
+    border:none;
+    float:left;
+    border-bottom:1px solid black;
+    font-size:50px;
+}
+.searchImg{
+    width:100px;
+    height:100px;
+    float:left;
+}
 .productListArea{
-    width:100%;
+    /*width:100%;
     height: 100px;
-    position:relative;
+    position:relative;*/
     border-bottom:1px solid black;
     padding-bottom:10px;
+    border-top:1px solid black;
 }
 .productImg{
     width: 30%;
     height: 100%;
-    float: left;
 }
 .productDetail{
-    float:left;
     width:70%;
     height:100%;
 }
@@ -169,6 +223,59 @@ fieldset {
     clear:both;
     content:'';
 }
+
+/* productRegistration css */
+.registration_container {
+    padding-top:50px;
+    margin:0 50px;
+}
+.registration_box{
+    margin:10px 0;
+    border-bottom:1px solid black;
+}
+.registration_text{
+    border:none;
+    width:100%;
+    height: 50px;
+    margin-top:10px;
+    background-color: white;
+    font-size:25px;
+}
+.registration_text_detail {
+    margin:10px 0;
+    width:100%;
+    height: 500px;
+    margin-top:10px;
+    font-size:25px;
+    border: none;
+}
+.image_container {
+    width:100%;
+    height:170px;
+    border:1px solid black;
+}
+.image_value{
+    width:100px;
+    height:100px;
+    display: block;
+    float:left;
+}
+.product_save_button{
+    height:50px;
+    font-size:20px;
+    width:100%;
+    padding:10px;
+    border-radius:5px;
+    display: block;
+    background-color: #FE9A2E;
+    color:white;
+    border:none;
+    cursor:pointer;
+    text-align:center;
+    margin-top: 20px;
+}
+
+
 .test ::after,
 .test2 ::after{
     display: block;

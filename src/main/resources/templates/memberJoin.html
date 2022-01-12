@@ -9,22 +9,34 @@
 <body>
     <main>
         <div class="member_join_container">
-            <h2>회원가입</h2>
+            <div>
+                <input type="text" class="common_title" value="회원가입" />
+            </div>
             <form th:action="member-join" method="post" id="member_join_action" onsubmit="return formCheck()" th:object="${memberJoinGetDto}" >
-                <label for="member_join_id" class="member_join_label">이메일(ID)</label><br>
-                <input type="text" id="member_join_id" class="member_join_text" name="id" th:field="*{id}">
+                <div class="member_join_box">
+                    <label for="member_join_id" class="member_join_label">이메일(ID)</label><br>
+                    <input type="text" id="member_join_id" class="member_join_text" name="id" th:field="*{id}">
+                </div>
 
-                <label for="member_join_pw" class="member_join_label">비밀번호(PW)</label><br>
-                <input type="text" id="member_join_pw" class="member_join_text" name="pw" th:field="*{pw}">
+                <div class="member_join_box">
+                    <label for="member_join_pw" class="member_join_label">비밀번호(PW)</label><br>
+                    <input type="text" id="member_join_pw" class="member_join_text" name="pw" th:field="*{pw}">
+                </div>
 
-                <label for="member_join_name" class="member_join_label">이름</label><br>
-                <input type="text" id="member_join_name" class="member_join_text" name="name" th:field="*{name}">
+                <div class="member_join_box">
+                    <label for="member_join_name" class="member_join_label">이름</label><br>
+                    <input type="text" id="member_join_name" class="member_join_text" name="name" th:field="*{name}">
+                </div>
 
-                <label for="member_join_phone" class="member_join_label">핸드폰번호</label><br>
-                <input type="text" id="member_join_phone" class="member_join_text" name="phone" th:field="*{phone}">
+                <div class="member_join_box">
+                    <label for="member_join_phone" class="member_join_label">핸드폰번호</label><br>
+                    <input type="text" id="member_join_phone" class="member_join_text" name="phone" th:field="*{phone}">
+                </div>
 
-                <label for="member_join_nickname" class="member_join_label" >닉네임</label><br>
-                <input type="text" id="member_join_nickname" class="member_join_text" name="nickname" th:field="*{nickname}">
+                <div class="member_join_box">
+                    <label for="member_join_nickname" class="member_join_label" >닉네임</label><br>
+                    <input type="text" id="member_join_nickname" class="member_join_text" name="nickname" th:field="*{nickname}">
+                </div>
 
                 <button type="submit" class="member_join_btn" id="member_join_btn">가입하기</button>
             </form>

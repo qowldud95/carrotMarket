@@ -21,9 +21,9 @@ function setThumbnail(event){
         var reader = new FileReader();
 
 
-        reader.onload = function (e) {
-            var image = document.createElement("image");
-            image.setAttribute("src", e.target.result);
+        reader.onload = function (event) {
+            var image = document.createElement("img");
+            image.setAttribute("src", event.target.result);
             image.setAttribute("class","image_value" );
             document.querySelector(".image_container").appendChild(image);
         };

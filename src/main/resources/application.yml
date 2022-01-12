@@ -9,8 +9,8 @@ spring:
   datasource:
     driver-class-name: oracle.jdbc.OracleDriver
     url: jdbc:oracle:thin:@localhost:1521:XE
-    username: company
-    password: 1234
+    username: carrot
+    password: carrot
 
   jpa:
     database-platform: org.hibernate.dialect.Oracle10gDialect

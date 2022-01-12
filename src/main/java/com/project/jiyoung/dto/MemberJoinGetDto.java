@@ -3,6 +3,7 @@ package com.project.jiyoung.dto;
 import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Data
@@ -22,10 +23,10 @@ public class MemberJoinGetDto {
     @NotBlank(message = "핸드폰번호 입력해주세요.")
     private String phone;
 
-    private String town;
+    private String area;
 
     private String img;
 
-    private Date regDate;
+    //private LocalDateTime regDate;
 
 }

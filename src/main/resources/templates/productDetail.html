@@ -8,54 +8,55 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" th:href="@{/css/style.css}">
 </head>
 <body>
-<section class="datail_container" style="margin-left:20px; margin-right: 20px;">
-    <article>
-        <h2 class="detail_title"><a href="" style="text-decoration-line: none; color:black;">← </a>HOME</h2>
-    </article>
-    <article style="background-color:red; width:100%; height: 200px;">
+<div class="datail_container">
+    <div>
+        <h2 class="detail_title"><a href="" >← </a>HOME</h2>
+    </div>
+    <div class="detail_img" >
         <!--상품 사진 -->
-    </article>
-    <article style="width: 100%; height: 100px;">
-        <div style="float:left; width:100px; height: 100%;">
-            <!--이미지바꾸기-->
-            <img src="img/mainCarrot.png" class="mainImg" style="display: block; width: 100%; height: 100%;">
+    </div>
+    <div class="profile_area">
+        <div class="profile_img_area" >
+            <!--프로필-->
+            <img src="img/mainCarrot.png" class="profile_img" >
         </div>
-        <div style="padding:40px 0px;">
-            <input type="text" value="닉네임" style="border: none; width:60%;"/>
+        <div class="profile_text_area" >
+            <input type="text" class="profile_text" value="닉네임"/>
         </div>
-    </article>
+    </div>
     <hr>
-    <article>
-        <div style="height:40px; width: 100%;">
-            <input type="text" value="제목" style="width:45%; float:left; border:none;">
-            <input type="text" value="가격" style="width:45%;  float:left; border:none;">
+    <div>
+        <div class="product_detail_area_1" >
+            <input type="text" value="제목" class="product_detail_text_1" >
+            <input type="text" value="가격" class="product_detail_text_1">
         </div>
-        <div style="height:40px; width: 100%;">
-            <input type="text" value="카테고리" style="width:45%; float:left;  border:none;">
-            <input type="text" value="게시시간" style="width:45%; float:left;  border:none;">
+        <div class="product_detail_area_1">
+            <input type="text" value="카테고리" class="product_detail_text_1">
+            <input type="text" value="게시시간" class="product_detail_text_1">
         </div>
-        <div style="height:200px; width: 100%;">
-            <input type="text" value="본문" style="width:100%; border:none; height:100%;">
+        <div class="product_detail_area_2" >
+            <input type="text" value="본문" class="product_detail_text_2">
         </div>
-    </article>
+    </div>
     <hr>
 
-    <div style="display:table; width:100%;">
+    <!--<div style="display:table; width:100%;">
         <div style="display:table-cell;">
             닉네임님의 판매상품
         </div>
         <div style="display:table-cell; text-align: right;">
             <a href="" style="text-decoration-line:none;">모두보기</a>
         </div>
-    </div>
+    </div>-->
+
    <!--<article style="width:50%;">
        닉네임님의 판매상품
    </article>
    <article style="width:50%;">
         <h4 style="text-align: right;"><a href="" style="text-decoration-line:none; ">모두보기</a></h4>
     </article>-->
-    <hr>
-    <article class="test" style="overflow: hidden;">
+
+   <!-- <div class="test" style="overflow: hidden;">
          <div style="float:left; width:50%;height: 120px; ">
              <img src="img/home.png" alt="" style="width:100px; height: 100px; display: block; padding:10px 10px; margin: 0 auto;">
              <input type="text" style="font-size: 12px; border:none; width:118px; display: block; margin:0 auto; text-align: center;" value="제목"><br>
@@ -66,14 +67,19 @@
             <input type="text" style="font-size: 12px; border:none; width:118px; display: block; margin:0 auto; text-align: center;" value="제목"><br>
             <input type="text" style="font-size: 12px; border:none; width:118px; display: block; margin:0 auto; text-align: center;" value="가격">
         </div>
-     </article>
-</section>
-<hr>
-    <footer style="position:absolute; bottom:10px; left:20px; right:20px;" class="test2" >
+     </div>-->
+</div>
+    <footer class="common_bottom" >
         <img src="img/like.png" style="width:30px; height:30px; border-right:1px solid grey; padding-right:20px; float:left;">
         <img src="img/comment.png" style="width:30px; height:30px; padding:0px 20px; float:left;">
         <input type="button" value="댓글 보기" onclick=""; style="float:left; border-radius:5px; display: block; background-color: #FE9A2E; color:white; border:none; cursor:pointer; text-align:center; padding:8px 8px;">
         <input type="button" value="댓글 남기기" onclick=""; style="float: left; border-radius:5px; display: block; background-color: #FE9A2E; color:white; border:none; cursor:pointer; text-align:center; margin-left: 20px; padding:8px 8px;">
     </footer>
+    <!--<footer style="position:absolute; bottom:10px; left:20px; right:20px;" class="test2" >
+        <img src="img/like.png" style="width:30px; height:30px; border-right:1px solid grey; padding-right:20px; float:left;">
+        <img src="img/comment.png" style="width:30px; height:30px; padding:0px 20px; float:left;">
+        <input type="button" value="댓글 보기" onclick=""; style="float:left; border-radius:5px; display: block; background-color: #FE9A2E; color:white; border:none; cursor:pointer; text-align:center; padding:8px 8px;">
+        <input type="button" value="댓글 남기기" onclick=""; style="float: left; border-radius:5px; display: block; background-color: #FE9A2E; color:white; border:none; cursor:pointer; text-align:center; margin-left: 20px; padding:8px 8px;">
+    </footer>-->
 </body>
 </html>

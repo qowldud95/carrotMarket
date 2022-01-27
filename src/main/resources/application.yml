@@ -1,5 +1,5 @@
 server:
-  port: 8282
+  port: 8100
   servlet:
     session:
       tracking-modes: cookie

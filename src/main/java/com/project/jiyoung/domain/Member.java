@@ -34,8 +34,8 @@ public class Member {
     @Column(name="MEMBER_IMG")
     private String img;
 
-   // @Column(name="MEMBER_REGDATE")
-    //private LocalDateTime regDate;
+    @Column(name="MEMBER_REGDATE")
+    private LocalDateTime regDate;
 
     //1:N관계
     //Member Table에는 존재하지 않지만, Member에 속하는 products를 객체안에 저장

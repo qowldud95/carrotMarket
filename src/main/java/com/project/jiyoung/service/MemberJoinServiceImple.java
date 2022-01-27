@@ -25,17 +25,17 @@ public class MemberJoinServiceImple implements MemberJoinService{
         String encryption = encryption();
         Member member = new Member();
         member.setId(memberJoinGetDto.getId());
-        //member.setPw(SHA512(memberJoinGetDto.getPw(), encryption));
-        //member.setName(memberJoinGetDto.getName());
-        //member.setNickname(memberJoinGetDto.getNickname());
-        //member.setPhone(memberJoinGetDto.getPhone());
-        //member.setRegDate(LocalDateTime.now());
+        member.setPw(SHA512(memberJoinGetDto.getPw(), encryption));
+        member.setName(memberJoinGetDto.getName());
+        member.setNickname(memberJoinGetDto.getNickname());
+        member.setPhone(memberJoinGetDto.getPhone());
+        member.setRegDate(LocalDateTime.now());
 
         log.info("id :: "+member.getId());
         log.info("pw :: "+member.getPw());
         log.info("name :: "+member.getName());
         log.info("town :: " + member.getArea());
-       // log.info("regDate :: "+String.valueOf(member.getRegDate()));
+        log.info("regDate :: "+String.valueOf(member.getRegDate()));
 
         boolean result = memberRepository.insertMember(member);
 

@@ -7,6 +7,8 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
+import java.util.List;
+import java.util.Optional;
 
 @Slf4j
 @Repository
@@ -30,4 +32,35 @@ public class MemberRepositoryImple implements MemberRepository{
             return false;
         }
     }
+
+    /**
+     * id로 전체정보조회
+     */
+    @Override
+    public Optional<Member> findMemberByLoginId(String id) {
+        return findAll().stream()
+                .filter(m->m.getId().equals(id))
+                .findAny();
+    }
+    public List<Member> findAll() {
+        return e.createQuery("select m from Member m")
+                .getResultList();
+    }
+
+    /**
+     * 아이디 비밀번호 확인
+     * @return
+     */
+    @Override
+    public List<Object[]> findSaltAndPwById(String id) {
+        try{
+            List<Object[]> result = e.createQuery("select m.pw from Member m where m.id = :id")
+                    .setParameter("id", id)
+                    .getResultList();
+            return result;
+        }catch (Exception e) {
+            return null;
+        }
+    }
+
 }
